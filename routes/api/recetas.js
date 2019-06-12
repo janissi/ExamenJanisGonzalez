@@ -49,6 +49,23 @@ router.get('/',(req,res,next)=>{
     });
     //metodo posts
 
+    
+router.put('/:id',(req,res,netx)=>{
+
+    var id = req.params.id;
+    var recetaOrig = {};
+    var recetaModif = {};
+    recetaColl = recetaColl.map((e,i)=>{
+        if(e.id===id){
+            recetaOrig = Object.assign({},e);
+            return recetaModif = Object.assign({},e,req.body);
+        }//map
+        return e;
+    });
+    res.status(200).json({Original: recetaOrig, Modificado: recetaModif} );
+});
+//metodo put
+
 
 
     module.exports = router;
