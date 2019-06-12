@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "cf283189-191e-4edf-b13d-d1d91fab3290",
+		"name": "Examen Janis Gonzalez",
+		"description": "Examen del 1 parcial seminario de software\n11 junio 2019",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "impl metodo POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "receta",
+							"value": "00x755 Paciente Daniel Sanchez",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "570",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "medicamento oral",
+							"type": "text"
+						},
+						{
+							"key": "observacion",
+							"value": "tomar cada 8horas",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "activo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/recetas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas"
+					]
+				},
+				"description": "agregar una nueva receta paciente Daniel Sanchez"
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar todas recetas GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/recetas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas"
+					]
+				},
+				"description": "mostrar todas las recetas\n1 vacia\n2 carlos ramirez\n3 daniel sanchez"
+			},
+			"response": []
+		},
+		{
+			"name": "mostrar receta Carlos ramirez GET by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/recetas/852c5117-0332-4b68-823b-16002d9a4d9f",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas",
+						"852c5117-0332-4b68-823b-16002d9a4d9f"
+					]
+				},
+				"description": "mostrar por uno por id"
+			},
+			"response": []
+		},
+		{
+			"name": "get mostrar receta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/recetas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas"
+					]
+				},
+				"description": "receta para modificar"
+			},
+			"response": []
+		},
+		{
+			"name": "impl metodo PUT actualizar ",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "receta",
+							"value": "00x755 Paciente Daniel Sanchez",
+							"type": "text"
+						},
+						{
+							"key": "precio",
+							"value": "620",
+							"type": "text"
+						},
+						{
+							"key": "tipo",
+							"value": "medicamento Inyectado",
+							"type": "text"
+						},
+						{
+							"key": "observacion",
+							"value": "cada dos dias",
+							"type": "text"
+						},
+						{
+							"key": "estado",
+							"value": "activo",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/api/recetas/290d6d75-5831-4a46-97b9-06f8d6844445",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas",
+						"290d6d75-5831-4a46-97b9-06f8d6844445"
+					]
+				},
+				"description": "actualizar receta"
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar para eliminar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/recetas",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas"
+					]
+				},
+				"description": "receta agregada solo para eliminar"
+			},
+			"response": []
+		},
+		{
+			"name": "impl DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "localhost:3000/api/recetas/e03d3b3e-d5ae-4c90-b789-3eed58ad6ed3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"recetas",
+						"e03d3b3e-d5ae-4c90-b789-3eed58ad6ed3"
+					]
+				},
+				"description": "eliminamos la receta y quedo vacio"
+			},
+			"response": []
+		}
+	]
+}

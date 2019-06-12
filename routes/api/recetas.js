@@ -66,6 +66,20 @@ router.put('/:id',(req,res,netx)=>{
 });
 //metodo put
 
+router.delete('/:id',(req,res,next)=>{
+    var id = req.params.id;
+    var recetaEleminar = {};
+    recetaColl = recetaColl.filter((e,i)=>{
+        if(e.id===id){
+            recetaEleminar = Object.assign({},e);
+            return false;
+        }
+        return true;
+    });
+
+    res.status(200).json({Eliminada: recetaEleminar, Coleccion: recetaColl});
+});
+//delete
 
 
     module.exports = router;
