@@ -37,5 +37,19 @@ router.get('/',(req,res,next)=>{
     });
     // OBTENER UNO POR ID
 
+    router.post('/',(req,res,next)=>{
+        var recetaNueva = Object.assign(
+          {},
+          recetaStr,
+          {id:uuid()},
+          req.body  
+        );
+        recetaColl.push(recetaNueva);
+        res.status(200).json(recetaNueva);
+    });
+    //metodo posts
+
+
+
     module.exports = router;
 
